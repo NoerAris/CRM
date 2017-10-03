@@ -1,4 +1,12 @@
 0001,Aris Setiawan,Male,true,27,081808070617,Tangerang
-0002,Risa Widiyastuti,Female,True,22,081808071623,Kebumen
+0002,Risa Widiyastuti,Female,true,22,081808071623,Kebumen
 0003,Hendrawan,Male,false,30,081234567890,Jakarta
 0004,Munir,Male,false,25,0812345678976,Jakarta
+0005,Setiawan,Male,false,27,081808070817,Bandung
+0006,Widiyastuti,Female,True,22,08180807523,Rowokele
+0007,Hendrawan Wong,Male,false,42,081234567891,Jakarta
+0008,Ikhsan,Male,false,25,081234567776,Surabaya
+0009,Septian Aji,Male,true,28,081715070617,Ciledug
+0010,Putri Munawaroh,Female,True,22,08180807123,Lampung
+00011,Bayu Aji,Male,false,31,087234567890,Jakarta
+00012,Firmaniandya,Male,true,39,08522345678976,Bogor
