@@ -447,7 +447,7 @@ public class FrameTable extends javax.swing.JFrame {
     private void txtFilterKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFilterKeyReleased
 
           DefaultTableModel table=(DefaultTableModel) NasabahTable.getModel();
-          String search=txtFilter.getText().toLowerCase();
+          String search=txtFilter.getText().toString();
           TableRowSorter<DefaultTableModel>tr=new TableRowSorter<DefaultTableModel>(table);
           NasabahTable.setRowSorter(tr);
           tr.setRowFilter(RowFilter.regexFilter(search));
