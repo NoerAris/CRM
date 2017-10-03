@@ -43,9 +43,11 @@ public class FrameTable extends javax.swing.JFrame {
     }
     
    private void showNasabah() {
-        
+            
+       
             DefaultTableModel model=(DefaultTableModel) NasabahTable.getModel();
-            List<Nasabah> nasabah=getDataFromFile("D:\\Materi BootCamp_Aris\\JAVA LATIHAN\\Session2\\TugasCRM\\nasabah.txt");
+            String lokasiFile="Nasabah.txt";
+            List<Nasabah> nasabah=getDataFromFile(lokasiFile);
             model.setRowCount(0);
             Object[]row=new Object[2];
             for(Nasabah nsb:nasabah){

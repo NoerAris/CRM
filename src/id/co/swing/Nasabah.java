@@ -18,6 +18,10 @@ public class Nasabah implements Comparable<Nasabah>{
     private String noTelepon;
     private String alamat;
 
+    public Nasabah() {
+    }
+
+    
     public Nasabah(String id, String name, String gender, Boolean married, Integer age, String noTelepon, String alamat) {
         this.id = id;
         this.name = name;
