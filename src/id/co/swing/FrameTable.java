@@ -12,9 +12,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Locale;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -46,7 +45,7 @@ public class FrameTable extends javax.swing.JFrame {
             
        
             DefaultTableModel model=(DefaultTableModel) NasabahTable.getModel();
-            String lokasiFile="Nasabah.txt";
+            String lokasiFile="DataNasabahBank.txt";
             List<Nasabah> nasabah=getDataFromFile(lokasiFile);
             model.setRowCount(0);
             Object[]row=new Object[2];

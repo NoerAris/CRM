@@ -1,4 +1,0 @@
-0001,Aris Setiawan,Male,true,27,081808070617,Tangerang
-0002,Risa Widiyastuti,Female,True,22,081808071623,Kebumen
-0003,Hendrawan,Male,false,30,081234567890,Jakarta
-0004,Munir,Male,false,25,0812345678976,Jakarta
