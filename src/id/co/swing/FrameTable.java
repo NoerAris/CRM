@@ -98,7 +98,7 @@ public class FrameTable extends javax.swing.JFrame {
                 //Split line assign ke strig array
                 String[] splitLine = line.split(",");
                 //buat objek questionmodel, array idx 0 kata dasar, idx 1 untuk petunjuk
-               Nasabah nb = new Nasabah(splitLine[0], splitLine[1].trim(), splitLine[2].trim(),Boolean.valueOf(splitLine[3].trim()),Integer.parseInt(splitLine[4].trim()), splitLine[5].trim(), splitLine[6].trim());
+               Nasabah nb = new Nasabah(splitLine[0], splitLine[1], splitLine[2],Boolean.valueOf(splitLine[3]),Integer.parseInt(splitLine[4]), splitLine[5], splitLine[6]);
                
     // add ke question collection
                 dataNasabah.add(nb);
@@ -497,10 +497,11 @@ public class FrameTable extends javax.swing.JFrame {
                     .addComponent(jLabel19)
                     .addComponent(comboStatusKredit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(txtBayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel17)
+                        .addComponent(txtBayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -556,7 +557,7 @@ public class FrameTable extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -576,7 +577,7 @@ public class FrameTable extends javax.swing.JFrame {
     private void txtFilterKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFilterKeyReleased
 
           DefaultTableModel table=(DefaultTableModel) NasabahTable.getModel();
-          String search=txtFilter.getText().toString();
+          String search=txtFilter.getText().toLowerCase();
           TableRowSorter<DefaultTableModel>tr=new TableRowSorter<DefaultTableModel>(table);
           NasabahTable.setRowSorter(tr);
           tr.setRowFilter(RowFilter.regexFilter(search));
